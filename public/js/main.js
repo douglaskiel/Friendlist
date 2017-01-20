@@ -49,7 +49,7 @@ var friendTemplate = "" +
 				name: $name.val(),
 				occupation: $occupation.val(),
 				age: $age.val(),
-				lifeexpectancy: $lifeexpectancy.val()
+				lifeexpectancy: $lifeExpectancy.val()
 			};
 
 			$.ajax({
