@@ -16,59 +16,55 @@ var friendTemplate = "" +
 
 	"</li>";
 
-	function addFriend(friend){
-		$friends.append(Mustache.render(friendTemplate, friend));
-	}
+function addFriend(friend){
+	$friends.append(Mustache.render(friendTemplate, friend));
+}
 
-	$(document).ready(function() {
-		// alert("jQuery is working");
+$(document).ready(function() {
+	// alert("jQuery is working");
 
-		// GET data request
-		$.ajax({
-			type : "GET",
-			url  : "http://rest.learncode.academy/api/learncode/friends",
-			
-			success : function(friend){
-				$.each(friend, function(i, friend){
-					addFriend(friend);
-				});
-			},
+	// GET data request
+	$.ajax({
+		type : "GET",
+		url  : "http://rest.learncode.academy/api/learncode/friends",
+		
+		success : function(friend){
+			$.each(friend, function(i, friend){
+				addFriend(friend);
+			});
+		},
 
-			error   : function(){
-				alert("Error loading friends");
-			}
+		error   : function(){
+			alert("Error loading friends");
+		}
 
 
-		})
+	});
 		
 		
 	// POST to add a friend
-		$('#add-friend').on("click", function(){
+	$('#add-friend').on("click", function(){
 
-			var friend = {
-				name: $name.val(),
-				occupation: $occupation.val(),
-				age: $age.val(),
-				lifeexpectancy: $lifeExpectancy.val()
-			};
+		var friend = {
+			name: $name.val(),
+			occupation: $occupation.val(),
+			age: $age.val(),
+			lifeexpectancy: $lifeExpectancy.val()
+		};
 
-			$.ajax({
-			// type : "POST",
-			url : "http://rest.learncode.academy/api/learncode/friends",
-	 		data : friend,
-			success : function(newFriend) {
-					addFriend(newFriend);
-			},
+		$.ajax({
+		type : "POST",
+		url : "http://rest.learncode.academy/api/learncode/friends",
+ 		data : friend,
+		success : function(newFriend) {
+				addFriend(newFriend);
+				console.log(newFriend);
 
-			error : function() {
-				alert("Error");
-			}	
+		},
+
+		error : function() {
+			alert("Error");
+		}	
 		});
 	});
 });
-
-
-
-
-
-
