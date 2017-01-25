@@ -10,6 +10,8 @@
 
 	<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="css/friendmain.css">
+	
 	<style type="text/css">
 	.thumb{padding: 5px 20px; text-align: center; background: lightblue;}
 	.thumb: nth-child(even){background: lightyellow;}
@@ -19,7 +21,7 @@
 </head>
 <body>
 
-		<div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+		<div style="max-width: 1500px; margin: 0 auto; padding: 10px;">
 			<div class="container">
 
 				<div class="row" style="margin-top padding: 20px">
@@ -29,7 +31,7 @@
 				<br />
 				<div class="row">
 
-					<div class="col-md-8 col-md-offset-2 thumb">
+					<div id="line" class="col-md-8 col-md-offset-2 thumb">
 						<h3>Add a Friend</h3>
 
 						<form class="form-inline">
@@ -38,7 +40,7 @@
 						<!-- Occupation -->
 						<label>Occupation:</label><input class="form-control" type="text" id="occupation">
 						<!-- Age -->
-						<label>Age:</label><input class="form-control" type="text" id="age"></p>
+						<label>Age:</label><input class="form-control" type="text" id="age">
 
 						<!-- Life Expectancy -->
 						<label>Life Expectancy:</label> <input class="form-control" type="text" id="lifeexpectancy">
@@ -53,7 +55,7 @@
 						<form class="form-inline">
 						<!-- Get Friends -->
 							<h3>Friends</h3>
-							<ul id="friends"> 
+							<ul style="list-style: none;" id="friends"> 
 
 							</ul>
 						
