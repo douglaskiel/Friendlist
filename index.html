@@ -9,31 +9,64 @@
 	<!--Here's the Bootstrap JS-->
 
 	<script type="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+	.thumb{padding: 5px 20px; text-align: center; background: lightblue;}
+	.thumb: nth-child(even){background: lightyellow;}
+	.container-fluid, .container{margin: 5px 10px; height: 15px;}
+
+	</style>
 </head>
 <body>
-	
-	<div class="container">
-		<h1>Hello all</h1>
 
-		<h3>add a Friend</h3>
-		<!-- Name -->
-		<p>Name: <input type="text" id="name"></p>
-		<!-- Occupation -->
-		<p>Occupation: <input type="text" id="occupation"></p>
-		<!-- Age -->
-		<p>Age: <input type="text" id="age"></p>
+		<div style="max-width: 1200px; margin: 0 auto; padding: 10px;">
+			<div class="container">
 
-		<!-- Life Expectancy -->
-		<p>Life Expectancy: <input type="text" id="lifeexpectancy"></p>
+				<div class="row" style="margin-top padding: 20px">
+					<div class="col-md-8 col-md-offset-2 thumb">
+					<h1>Hello all</h1>
+				</div>
+				<br />
+				<div class="row">
 
-		<button id="add-friend">Add</button>
-		<!-- Get Friends -->
-		<h3>Friends</h3>
-		<ul id="friends">  
+					<div class="col-md-8 col-md-offset-2 thumb">
+						<h3>Add a Friend</h3>
 
-		</ul>
-	</div>
+						<form class="form-inline">
+						<!-- Name -->
+						<label>Name:</label> <input class="form-control" type="text" id="name">
+						<!-- Occupation -->
+						<label>Occupation:</label><input class="form-control" type="text" id="occupation">
+						<!-- Age -->
+						<label>Age:</label><input class="form-control" type="text" id="age"></p>
 
+						<!-- Life Expectancy -->
+						<label>Life Expectancy:</label> <input class="form-control" type="text" id="lifeexpectancy">
+						<button id="add-friend">Add</button>
+					</div>
+
+						
+				</div>
+				<div class="row">
+					<div class="col-md-2 col-md-8 col-md-offset-2 thumb">
+
+						<form class="form-inline">
+						<!-- Get Friends -->
+							<h3>Friends</h3>
+							<ul id="friends"> 
+
+							</ul>
+						
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4"></div>
+					<div class="col-md-4"></div>
+					<div class="col-md-4"></div>
+				</div>
+			</div>
+		</div>
 	
 	<script src="js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
