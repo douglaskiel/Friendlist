@@ -13,9 +13,17 @@
 	<link rel="stylesheet" type="text/css" href="css/friendmain.css">
 	
 	<style type="text/css">
-	.thumb{padding: 5px 20px; text-align: center; background: lightblue;}
+	body{background-color: #ffe381;
+	background-image: url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+	}
+	.thumb {padding: 5px 20px; text-align: center; background: #275DAD; border-radius: 6px;}
 	.thumb: nth-child(even){background: lightyellow;}
+	.thumb {}
 	.container-fluid, .container{margin: 5px 10px; height: 15px;}
+	#line {padding: 15px; background-color: #cfc270;
+	background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+	border-radius: 6px; margin: 20px 10px 0px 10px;}
+	#friends {padding: 15px; background-color: #007090; border-radius: 6px; margin: 10px;}
 
 	</style>
 </head>
@@ -26,40 +34,52 @@
 
 				<div class="row" style="margin-top padding: 20px">
 					<div class="col-md-8 col-md-offset-2 thumb">
-					<h1>Hello all</h1>
+					<h1 style="font-family: ForgottenUncial">Hello all</h1>
 				</div>
+				<br />
 				<br />
 				<div class="row">
 
-					<div id="line" class="col-md-8 col-md-offset-2 thumb">
+					<div id="line" class="col-md-4 col-md-push-1">
 						<h3>Add a Friend</h3>
 
 						<form class="form-inline">
 						<!-- Name -->
-						<label>Name:</label> <input class="form-control" type="text" id="name">
-						<!-- Occupation -->
-						<label>Occupation:</label><input class="form-control" type="text" id="occupation">
-						<!-- Age -->
-						<label>Age:</label><input class="form-control" type="text" id="age">
-
-						<!-- Life Expectancy -->
-						<label>Life Expectancy:</label> <input class="form-control" type="text" id="lifeexpectancy">
-						<button id="add-friend">Add</button>
+						  <div class="col-md-4 col-md-push-1">
+							<label>Name:</label> 
+							<br />
+							  <input class="form-control" type="text" id="name">
+							<!-- Occupation -->
+							<br />
+							<label>Occupation:</label>
+							<br />
+							  <input class="form-control" type="text" id="occupation">
+							<br />
+							<!-- Age -->
+							<label>Age:</label>
+							<br />
+							  <input class="form-control" type="text" id="age">
+							<br />
+							<!-- Life Expectancy -->
+							<label>Life Expectancy:</label>
+							<br /> 
+							  <input class="form-control" type="text" id="lifeexpectancy">
+							<br />
+						    <button id="add-friend" class="btn btn-primary" style="margin-top: 10px;">Add</button>
+						  </div>
+						</form>
 					</div>
 
 						
-				</div>
-				<div class="row">
-					<div class="col-md-2 col-md-8 col-md-offset-2 thumb">
+				
+					<div class="col-md-5 col-md-push-2">
 
 						<form class="form-inline">
 						<!-- Get Friends -->
 							<h3>Friends</h3>
 							<ul style="list-style: none;" id="friends"> 
-
 							</ul>
-						
-
+						</form>
 					</div>
 				</div>
 				<div class="row">
